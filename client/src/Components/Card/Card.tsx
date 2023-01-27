@@ -52,11 +52,11 @@ const Card = ({ milkProducts }: ICard) => {
 
   useEffect(() => {
     if (!milk) {
-      navigate("/")
+      navigate("/*")
     } 
     setBubbleCount(() => milkQuantity.value)
     setNewVal(() => Number(((milkQuantity.value - milkQuantity.min) * 100) / (milkQuantity.max - milkQuantity.min)))
-  }, [milkQuantity.max, milkQuantity.min, milkQuantity.value] )
+  }, [milk, milkQuantity.max, milkQuantity.min, milkQuantity.value, navigate] )
 
   return (
     <section className='flex min-h-[80vh]'>
