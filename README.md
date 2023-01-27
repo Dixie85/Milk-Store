@@ -51,7 +51,7 @@ For starters, running `localhost:3000` will take you to the Home page where you 
 
 <br>
 
-Clicking on one of the displayed products it will redirect you to a different page with the details for the chosen product. Among the details you can see the name, type and quantity in stock in liters. Below the details lies the [Slider](#slider) which you can use, to choose the amount of liters you want to purchase. When done, pressing the order button will place the quantity of your desired product in the cart.
+Clicking on one of the displayed products it will redirect you to a different page with details for the chosen product. Among the details you can see name, type and quantity in stock in liters. Below the details lies the [Slider](#slider) which you can use, to determined the amount of liters you want to purchase. When done, pressing the order button will place the quantity of your desired product in the cart.
 
 <br>
 
@@ -65,7 +65,7 @@ Clicking on one of the displayed products it will redirect you to a different pa
 
 <br>
 
-## Logo Icon
+### Logo Icon
 On the navbar first appear the Logo icon which pressed will redirect you to the Home page.
 
 <br>
@@ -80,7 +80,7 @@ On the navbar first appear the Logo icon which pressed will redirect you to the 
 
 <br>
 
-#### Milk Types Dropdown
+### Milk Types Dropdown
 Further away on the right side of the navbar you can find the button for  Milk Types dropdown menu. Pressing the button will show all the types of milk which you can choose from. Choosing one of the types will redirect you to a different page where only products from the chosen type will be displayed. Only 9 products will display and for the users convenience the page will be equipped with [Pagination](#Pagination).
 
 <br>
@@ -95,7 +95,7 @@ Further away on the right side of the navbar you can find the button for  Milk T
 
 <br>
 
-#### Cart Icon
+### Cart Icon
 The Cart icon displays how many products have been chosen for purchase and clicking on it will show a slide menu with all the chosen products (in development)
 
 <br>
@@ -110,7 +110,7 @@ The Cart icon displays how many products have been chosen for purchase and click
 
 <br>
 
-#### Search bar
+### Search bar
 Searching by name is a benefit for reducing the number of all the products displayed on the home page.
 
 <br>
@@ -130,7 +130,7 @@ Searching by name is a benefit for reducing the number of all the products displ
 
 <br>
 
-#### Filter 
+### Filter 
 On the home page you can filter the products by their types as well. Pressing on the filter will display a dropdown check box menu.
 
 <br>
@@ -151,7 +151,7 @@ On the home page you can filter the products by their types as well. Pressing on
 
 <br>
 
-#### Pagination 
+### Pagination 
 The pagination shows the current page and the number of pages in total. A Previous and a next button are included.
 
 <br>
@@ -166,7 +166,7 @@ The pagination shows the current page and the number of pages in total. A Previo
 
 <br>
 
-#### Slider 
+### Slider 
 Easy to use slider showing you the amount of liter you have chosen in a interesting shaped bubble.
 
 <br>
