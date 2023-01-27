@@ -3,7 +3,6 @@ import milkImg from '../../Assets/Images/milk.png'
 import { useNavigate, useParams } from "react-router-dom";
 import { AiOutlineLeft } from 'react-icons/ai';
 import { useEffect, useState } from "react";
-import { GrClose } from 'react-icons/gr';
 
 interface ICard {
   milkProducts: IMilk[]
@@ -20,9 +19,6 @@ let milkValue = {
   max: 99,
   min: 1
 }
-
-//Last minute bug appeared while applying the success message 
-//when the order button was clicked... fixing it as you read
 
 const Card = ({ milkProducts }: ICard) => {
   milkValue.max = milkProducts.length
@@ -46,11 +42,18 @@ const Card = ({ milkProducts }: ICard) => {
     })
   }
 
-  const handleOrder = () => {
+  const handleOrder = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault()
      setOrdered(prev => !prev)
+    setTimeout(()=>{
+      setOrdered(prev => !prev)
+    }, 1700)
   }
 
   useEffect(() => {
+    if (!milk) {
+      navigate("/")
+    } 
     setBubbleCount(() => milkQuantity.value)
     setNewVal(() => Number(((milkQuantity.value - milkQuantity.min) * 100) / (milkQuantity.max - milkQuantity.min)))
   }, [milkQuantity.max, milkQuantity.min, milkQuantity.value] )
@@ -62,8 +65,7 @@ const Card = ({ milkProducts }: ICard) => {
           <button onClick={() => navigate(-1)} className={'flex items-center'}> <AiOutlineLeft /> Back</button>
           {ordered ? 
           <div>
-            <span className="absolute right-0">Order was made</span> 
-            <button onClick={handleOrder}><GrClose /></button> 
+            <span className="absolute top-0 right-0 border p-5 rounded-lg text-pink-400 bg-violet-200/70 border-gray-300">ORDER WAS MADE</span> 
           </div>
           : ''}
         </section>
@@ -82,7 +84,7 @@ const Card = ({ milkProducts }: ICard) => {
                 <input type="range" min="1" max={milk!.storage} step={1} value={milkQuantity.value} onChange={handleQuantity} className="mt-12 mb-20 w-full h-2 rounded bg-green-300 appearance-none" />
                 <output className={`bubble absolute rounded-lg py-2 px-3 bg-white shadow-xl bottom-5 `} style={{ left: `calc(${newVal}% + (${8 - newVal * 0.15}px))` }}>{bubbleCount} liter</output>
               </div>
-              <button type="submit" className=" w-28 py-1 px-4 bg-zinc-300" onClick={handleOrder}>Order</button>
+              <button type="submit" className=" w-28 py-1 px-4 bg-zinc-300 disabled:bg-red-400 disabled:text-white" disabled={ordered} onClick={handleOrder}>Order</button>
             </form>
           </div>
           : 
@@ -95,4 +97,3 @@ const Card = ({ milkProducts }: ICard) => {
 }
 
 export default Card
-
