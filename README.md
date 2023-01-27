@@ -16,7 +16,7 @@
 ---
 ## About
 Introducing the webstore where you can buy the finest glass of milk 🥛
-<br><br> In this full stack application users can experience the UI provided by `React` and `Tailwind` on the frontend and backend provided by `Express`
+<br><br> In this full stack application users can experience the UI provided by `React + Typescript` and `Tailwind` on the frontend and backend provided by `Express + Typescript`
 <br><br> The tech stack for this project includes using `Mongoose` on the backend and `MongoDB` as a database which are still not implemented.
 <br><br>The application is `Desktop` use only
 

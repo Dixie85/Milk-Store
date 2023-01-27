@@ -8,6 +8,7 @@ import Page404 from './Pages/Page404/Page404';
 import { IMilk } from './Interfaces/Interfaces';
 import Header from './Layout/Header/Header';
 import Home from './Pages/Home/Home';
+import Footer from './Layout/Footer/Footer';
 
 function App() {
   const [milkProducts, setMilkProducts] = useState<IMilk[]>([])
@@ -33,6 +34,7 @@ function App() {
         {/* <Route path="/test/" element={<Test />}></Route> */}
         <Route path="/*" element={<Page404 />}></Route>
       </Routes >
+      <Footer />
     </>
   );
 }
