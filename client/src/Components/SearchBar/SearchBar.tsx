@@ -24,7 +24,8 @@ function SearchBar({ milkProducts, setFilteredData, searchByName, setSearchByNam
     }
   };
 
-  const clearInput = () => {
+  const clearInput = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault()
     setFilteredData([]);
     setSearchByName('');
   };
