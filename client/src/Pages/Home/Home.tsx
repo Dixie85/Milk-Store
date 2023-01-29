@@ -41,7 +41,7 @@ const Home = ({ milkProducts }: IHome) => {
 
       </section>
 
-      <section className="grid grid-cols-3 gap-11 mt-10">
+      <section className="grid grid-cols-3 gap-11 mt-10 mb-10">
         {filteredData.length > 1 || searchByName.length ?
           !chosenFilterInput.length ?
             filteredData.map(pro => <DisplayCard key={pro.id} product={pro} />)
